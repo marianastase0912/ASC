@@ -1,0 +1,42 @@
+Nume: NASTASE MARIA Grupă: 335CC
+Tema 1
+
+Organizare
+
+    Explicație pentru soluția aleasă:
+    1. This project implements the MPMC Problem. The producer creates and adds to the common buffer the products.
+    The consumers can add or remove items from their carts. The addition operation can be realised only if the
+    product is listed in the common buffer.
+
+Obligatoriu:
+
+    * Producer:
+        The producer will publish the products to the marketplace, each producer has a limited number of products
+        they can publish, this aspect is handled in the publish function in marketplace. If the item can't be published
+        the producer will wait a specified time, if the item can pe published, it will wait the allocated time.
+    * Consumer:
+        The Consumer can either add or remove items from the cart using the functions from the marketplace. The placed
+        order(the final list of products) is printed.
+    * Marketplace:
+        The operations of publish, add, remove and get_id for producers and consumers are synchronized. The common buffer
+        is stored in a list.
+        In the publish function, to keep track of the number of products for each producer, it's used a dictionary,
+        calculating the length of the list for the current producer.
+        To add or remove items from carts, it's used another dictionary for the items in the cart.
+        To place the order, the list for the specific cart is returned to the Consumer.
+    
+    I think the homework was useful and the my implementation is efficient.
+
+Implementare
+
+    All the task of the assignment are implemented
+    Python is an excellent support for parallel programming.
+
+Resurse utilizate
+
+    https://ocw.cs.pub.ro/courses/asc/laboratoare/02
+    https://ocw.cs.pub.ro/courses/asc/laboratoare/03
+    https://docs.python.org/3/
+
+Git
+
